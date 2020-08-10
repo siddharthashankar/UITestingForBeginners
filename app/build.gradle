@@ -7,7 +7,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.sid.mainactivity"
+        applicationId "com.sid.uitest"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -45,3 +45,5 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit-ktx:$androidx_test"
 
 }
+
+apply plugin: 'com.google.gms.google-services'
