@@ -36,7 +36,7 @@ class MockMovieMainActivityTest{
             arrayListOf("R.J. Stewart", "James Vanderbilt"),
             arrayListOf("Dwayne Johnson", "Seann William Scott", "Rosario Dawson", "Christopher Walken")
         )
-
+        // mocking...
         val movieDataSource = mockk<MoviesRemoteDataSource>()
         every {
             movieDataSource.getMovie(movieId)

@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dialog.DialogActivity"></activity>
+        <activity android:name=".mockk.factory.MockMovieMainActivity"></activity>
+        <activity android:name=".dialog.DialogActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SecondaryActivity" />
-        <activity android:name=".movieapp.ui.MainActivityMovie"/>
-
-        <activity android:name=".mockk.factory.MockMovieMainActivity">
+        <activity android:name=".movieapp.ui.MainActivityMovie" />
+        <activity android:name=".recyclerviewui.RecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
