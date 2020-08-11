@@ -55,7 +55,6 @@ class MovieListFragmentTest{
         onView(withId(R.id.recycler_view)).check(matches(isDisplayed()))
     }
 
-
     @Test
     fun test_navDirectorsFragment_validateDirectorsList() {
 
