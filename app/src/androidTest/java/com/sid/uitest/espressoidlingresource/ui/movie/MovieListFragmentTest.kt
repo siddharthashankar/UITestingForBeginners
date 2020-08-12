@@ -12,6 +12,7 @@ import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import com.codingwithmitch.espressouitestexamples.data.FakeMovieData
 import com.codingwithmitch.espressouitestexamples.ui.movie.DirectorsFragment
 import com.sid.uitest.R
+import com.sid.uitest.espressoidlingresource.ui.movie.util.EspressoIdlingResourceRule
 import com.sid.uitest.espressoidlingresource.util.EspressoIdlingResource
 import org.hamcrest.core.IsNot.not
 import org.junit.*
@@ -29,7 +30,8 @@ class MovieListFragmentTest{
     @get:Rule
     val activityRule = ActivityScenarioRule(EspressoIdlingResourceActivity::class.java)
 
-    @Before
+    // long way 1
+    /*@Before
     fun registerIdlingResource(){
         IdlingRegistry.getInstance().register(EspressoIdlingResource.countingIdlingResource)
     }
@@ -37,7 +39,11 @@ class MovieListFragmentTest{
     @After
     fun unregisterIdlingResource(){
         IdlingRegistry.getInstance().unregister(EspressoIdlingResource.countingIdlingResource)
-    }
+    }*/
+
+    // custom way of 1
+    @get:Rule
+    val espressoIdlingResourceRule = EspressoIdlingResourceRule()
 
     @Test
     fun test_isListFragmentVisible_onAppLaunch() {
